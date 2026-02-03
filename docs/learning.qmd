@@ -1,0 +1,37 @@
+---
+title: "Learning"
+author: "Rostools"
+format: html
+---
+
+```{r setup}
+library("tidyverse")
+```
+
+
+
+
+
+## Writing R code
+
+2+2
+
+
+```{r}
+2+2
+```
+
+
+## About me 
+- David Vadsholt
+- SDCN
+
+My **name** is *David*. 
+
+___
+
+## Simple code
+```{r}
+3*3
+```
+
