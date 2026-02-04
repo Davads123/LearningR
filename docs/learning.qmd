@@ -5,6 +5,10 @@ format: html
 ---
 
 ```{r setup}
+#| message: false
+#| warning: false
+
+
 library("tidyverse")
 
 post_meal_data <- read.csv2(here::here("data/post-meal-insulin.csv"))
@@ -48,5 +52,13 @@ post_meal_data
 glimpse(post_meal_data)
 ```
 
+## Plot one continous variable
+```{r}
+#| fig-cap: "Distribution of BMI"
+#| label: fig-bmi-histo
+ggplot(post_meal_data, aes(x=BMI)) +
+  geom_histogram(na.rm = FALSE)
+```
 
 
+see @fig-bmi-histo
