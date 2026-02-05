@@ -2,6 +2,8 @@
 title: "Learning"
 author: "Rostools"
 format: html
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ```{r setup}
@@ -290,3 +292,23 @@ post_meal_data |>
   geom_point() +
   scale_color_viridis_c(option = "inferno")
 ```
+
+## Calculating summary statistics
+
+```{r}
+tidied_post_meal_data %>% 
+  summarise(max_bmi=max(BMI),min_BMI=min(BMI),mean_BMI=mean(BMI),sd(BMI))
+
+
+```
+
+
+## Summarize with gorup by
+```{r}
+tidied_post_meal_data %>% 
+  group_by(Group) %>% 
+  summarize(mean_age = mean(Age),
+            mean_bmi = mean(BMI)) %>% 
+  ungroup()
+```
+
