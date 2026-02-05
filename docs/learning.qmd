@@ -182,4 +182,23 @@ tidier_post_meal_data <- small_post_meal_data %>%
   ) %>%
   filter(glykemi == 0) %>%
   select(-glykemi)
+
+tidied_post_meal_data <- tidier_post_meal_data %>%
+  mutate(
+    insuline_glucose_ratio = auc_insuline / auc_glucose,
+    Group = if_else(Group == "CTR", "Control", "First-degree relative")
+  )
+```
+
+
+## Modifying data
+```{r}
+tidier_post_meal_data %>%
+  mutate(insuline_glucose_ratio = auc_insuline / auc_glucose)
+
+tidier_post_meal_data %>%
+  mutate(
+    insuline_glucose_ratio = auc_insuline / auc_glucose,
+    Group = if_else(Group == "CTR", "Control", "First-degree relative")
+  )
 ```

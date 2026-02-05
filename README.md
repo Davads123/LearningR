@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 TODO: Add more to the title of your project here
 
 rostools teaching R
